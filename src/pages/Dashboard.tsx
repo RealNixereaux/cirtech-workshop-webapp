@@ -4,11 +4,18 @@ import { useUser } from "@/hooks/useUser";
 import { useStepProgress } from "@/hooks/useStepProgress";
 import ProgressCard from "@/components/ui/ProgressCard";
 import WorkshopProgressBar from "@/components/ui/WorkshopProgressBar"; // <-- Import Progress Bar
+import React, { useEffect } from "react";
+
 
 const Dashboard = () => {
   const { data, isLoading, isError } = useProgressData();
   const { name, role, team } = useUser();
   const { completedSteps } = useStepProgress();
+
+  useEffect(() => {
+    document.title = "Cirtech Automation Workshop";
+  }, []);
+  
 
   if (isLoading) {
     return (
