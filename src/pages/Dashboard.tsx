@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useProgressData } from "@/hooks/useProgressData";
 import { useUser } from "@/hooks/useUser";
 import { useStepProgress } from "@/hooks/useStepProgress";
 import ProgressCard from "@/components/ui/ProgressCard";
 import WorkshopProgressBar from "@/components/ui/WorkshopProgressBar"; // <-- Import Progress Bar
-import React, { useEffect } from "react";
+
 
 
 const Dashboard = () => {
